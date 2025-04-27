@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invoice - {{INVOICE_NUMBER}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+        .invoice-container {
+            max-width: 800px;
+            margin: 0 auto;
+            border: 1px solid #ddd;
+            padding: 30px;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .company-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+        }
+        .invoice-details {
+            margin-bottom: 30px;
+        }
+        .customer-details {
+            margin-bottom: 30px;
+        }
+        .amount-section {
+            margin-top: 30px;
+            text-align: right;
+        }
+        .amount {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="invoice-container">
+        <div class="header">
+            <div class="company-name">{{COMPANY_NAME}}</div>
+            <div>INVOICE</div>
+        </div>
+
+        <div class="invoice-details">
+            <strong>Invoice Number:</strong> {{INVOICE_NUMBER}}<br>
+            <strong>Date:</strong> {{DATE}}
+        </div>
+
+        <div class="customer-details">
+            <strong>Bill To:</strong><br>
+            {{CUSTOMER_NAME}} {{CUSTOMER_LASTNAME}}<br>
+            {{CUSTOMER_ADDRESS}}
+        </div>
+
+        <div class="amount-section">
+            <div>Total Amount:</div>
+            <div class="amount">{{AMOUNT}}</div>
+        </div>
+
+        <div class="footer">
+            Thank you for your business!<br>
+            {{COMPANY_NAME}}
+        </div>
+    </div>
+</body>
+</html>
